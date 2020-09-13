@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+
+    snmptrapd:
+        build:
+            context: ./dock_snmptrapd
+            dockerfile: Dockerfile
+        image: serer_app
+        networks:
+            - the_network
+        container_name: snmptrapd
+
+
+networks:
+    the_network:
+        name: the_network
+        driver: bridge
+
