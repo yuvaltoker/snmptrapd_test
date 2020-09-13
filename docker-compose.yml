@@ -1,14 +1,25 @@
 version: "3.8"
 services:
 
-    snmptrapd:
+    testing_snmptrapd:
         build:
             context: ./dock_snmptrapd
             dockerfile: Dockerfile
-        image: serer_app
+        image: polinux/snmpd
         networks:
             - the_network
-        container_name: snmptrapd
+        container_name: testing_snmptrapd
+
+
+    test:
+        build:
+            context: ./dock_test
+            dockerfile: Dockerfile
+        image: polinux/snmpd
+        networks:
+            - the_network
+        container_name: test
+
 
 
 networks:
