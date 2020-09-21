@@ -1,5 +1,7 @@
 FROM polinux/snmpd
-ADD go /
-ADD instructions.sh /
-ENTRYPOINT [ "./instructions.sh" ]
+COPY ./go /
+COPY ./instructions.sh /
+RUN chmod +x /instructions.sh
+RUN echo "hey, you're here" >> /etc/hosts.allow
+ENTRYPOINT ["/bin/sh", "/instructions.sh"]
 

@@ -5,7 +5,6 @@ services:
         build:
             context: ./dock_snmptrapd
             dockerfile: Dockerfile
-        image: polinux/snmpd
         networks:
             - the_network
         container_name: testing_snmptrapd
@@ -15,7 +14,6 @@ services:
         build:
             context: ./dock_test
             dockerfile: Dockerfile
-        image: polinux/snmpd
         networks:
             - the_network
         container_name: test

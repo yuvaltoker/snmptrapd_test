@@ -1,4 +1,7 @@
-#!/bin/sh
+#!/bin/bash
+
+
+
 # In case of ? - see if it's working without it, in that case you 
 # can delete it
 
