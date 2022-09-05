@@ -1,22 +1,23 @@
-# sweet! this thing has just worked so... thanks for reading this, and let's get to the point!
+#SNMP traps
 
-# for building the images and running the containers just type in the terminal:
+In order to build the images and run the containers just type in the terminal:
 ```bash
 docker-compose up
 ```
-# after that two images are suppose to be built, and the two containers are suppose to be up and running. 
+Right after that, two images are suppose to be built, and the two containers are suppose to be up and running based on their images. 
 
-# to see the snmptraps messages, you'll need to first get in the container.
-# type in the terminal:
+Where can i find the trap messages? 
+First, get in the container-
+type in the terminal:
 ```bash
 docker exec -it testing_snmptrapd bash
 ```
-# great! now you're in the container where the snmptrap daemon is on. now you'll need to open the file.log.
-# type in the terminal:
+Great! now you're in the container where the snmptrap daemon is located. next you should open the file.log.
+type in the terminal:
 ```bash
 nano file.log
 ```
-# the visuallization of the incoming snmptraps is static, which means when you open the file you'll see the current state.
+The visuallization of the incoming snmptraps is static, which means when you open the file you'll see the current state.
 
-# so in order to see the incoming snmptraps just close the file and open it again.  
+so in order to see the incoming snmptraps just close the file and open it again.  
 
